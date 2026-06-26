@@ -1,0 +1,9 @@
+Pré-compilar uma vez (gera /js a partir de /src) e commitar tudo:
+
+  npm i -D @babel/cli @babel/core @babel/preset-react
+  npx babel src/tweaks-panel.jsx -o js/tweaks-panel.js --presets @babel/preset-react
+  npx babel src/mesa-data.jsx    -o js/mesa-data.js    --presets @babel/preset-react
+  npx babel src/mesa-app.jsx     -o js/mesa-app.js     --presets @babel/preset-react
+  npx babel src/mesa-tweaks.jsx  -o js/mesa-tweaks.js  --presets @babel/preset-react
+
+Depois: git add . && git commit -m "site" && git push  (Pages serve a raiz; CNAME=anavanzin.com).
