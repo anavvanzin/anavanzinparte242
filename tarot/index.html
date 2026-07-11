@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O Tarô da Iconocracia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero-panel">
+        <div class="eyebrow">Um baralho de alegorias jurídicas</div>
+        <h1>O Tarô da Iconocracia</h1>
+        <p class="lede">
+          Retire uma carta para revelar uma alegoria feminina da cultura jurídica — Justiça, Liberdade, República, Lei
+          ou Verdade — e contemple sua vida simbólica na história e no pensamento acadêmico.
+        </p>
+
+        <div class="controls">
+          <button id="drawBtn" class="primary-btn" type="button">Retirar uma carta</button>
+          <button id="reshuffleBtn" class="secondary-btn" type="button">Embaralhar novamente</button>
+        </div>
+
+        <div class="deck-meta">
+          <div><span>Cartas restantes</span><strong id="remainingCount">5</strong></div>
+          <div><span>Última retirada</span><strong id="lastDrawn">—</strong></div>
+        </div>
+
+        <div class="instructions-card">
+          <h2>Como Jogar</h2>
+          <p>
+            Clique em <strong>Retirar uma carta</strong> para revelar uma alegoria por vez. Cada retirada remove a carta
+            do baralho até você embaralhar novamente. Contemple o simbolismo visual e leia a análise acadêmica correspondente.
+          </p>
+        </div>
+      </section>
+
+      <section class="board-panel">
+        <div class="card-stage" aria-live="polite">
+          <div id="card" class="tarot-card" role="img" aria-label="Verso da carta de tarô">
+            <div class="card-face card-back">
+              <img src="assets/card_back.png" alt="Verso do Tarô da Iconocracia" class="card-back-image">
+            </div>
+            <div class="card-face card-front">
+              <img id="cardImage" class="card-image" src="assets/card_back.png" alt="">
+              <div class="card-glass-top">
+                <span id="cardNumber" class="card-number">00</span>
+              </div>
+              <div class="card-glass-bottom">
+                <span id="cardTitle" class="card-title">Aguardando retirada</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="readingsPanel" class="readings-panel">
+        <div class="readings-placeholder" id="readingsPlaceholder">
+          <div class="placeholder-symbol">✦</div>
+          <p>Retire uma carta para revelar os seus segredos acadêmicos e históricos...</p>
+        </div>
+        <div class="readings-content hidden" id="readingsContent">
+          <div class="readings-header">
+            <span id="readingsNumber" class="readings-number">Arcano 00</span>
+            <h2 id="readingsTitle" class="readings-title">Aguardando</h2>
+          </div>
+          
+          <div class="reading-section">
+            <h3>Alegoria Visual</h3>
+            <p id="readingsDescription" class="reading-text"></p>
+          </div>
+          
+          <div class="reading-section">
+            <h3>Origem Histórica</h3>
+            <p id="readingsHistory" class="reading-text"></p>
+          </div>
+          
+          <div class="reading-section">
+            <h3>Sentido Acadêmico</h3>
+            <p id="readingsMeaning" class="reading-text"></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

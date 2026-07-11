@@ -109,6 +109,13 @@ const DESK_ICONS = [{
   },
   Icon: AtlasIcon
 }, {
+  id: 'tarot',
+  label: {
+    pt: 'tarô',
+    en: 'tarot'
+  },
+  Icon: AtlasIcon
+}, {
   id: 'radiografia',
   label: {
     pt: 'radiografia',
@@ -207,7 +214,7 @@ const DESK_ICONS = [{
   },
   Icon: MailIcon
 }];
-const MENUS = ['sobre', 'tese', 'conceitos', 'publicacoes', 'ius', 'contato'];
+const MENUS = ['sobre', 'tese', 'conceitos', 'publicacoes', 'ius', 'tarot', 'contato'];
 const MENU_LABEL = {
   pt: {
     sobre: 'Sobre',
@@ -215,6 +222,7 @@ const MENU_LABEL = {
     conceitos: 'Conceitos',
     publicacoes: 'Perfis',
     ius: 'Ius Gentium',
+    tarot: 'Tarô',
     contato: 'Contato'
   },
   en: {
@@ -223,6 +231,7 @@ const MENU_LABEL = {
     conceitos: 'Concepts',
     publicacoes: 'Profiles',
     ius: 'Ius Gentium',
+    tarot: 'Tarot',
     contato: 'Contact'
   }
 };
@@ -639,6 +648,10 @@ function Desktop() {
     }
     if (id === 'iconocracia') {
       window.location.href = 'iconocracia/';
+      return;
+    }
+    if (id === 'tarot') {
+      window.location.href = 'tarot/';
       return;
     }
     if (id === 'radiografia') {
