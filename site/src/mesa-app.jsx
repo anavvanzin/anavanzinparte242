@@ -170,7 +170,7 @@ function App() {
   const minimize = useCallback((id) => setWins((ws) => ws.map((w) => w.id === id ? { ...w, min: true } : w)), []);
   const drag = useCallback((id, x, y) => setWins((ws) => ws.map((w) => w.id === id ? { ...w, x, y } : w)), []);
   const clearIntro = useCallback((id) => setWins((ws) => ws.map((w) => w.id === id ? { ...w, intro: false } : w)), []);
-  const openPath = useCallback((p) => { /* prototype: destinos reais no deploy */ }, []);
+  const openPath = useCallback((p) => { window.location.href = p; }, []);
 
   const visibleWins = wins.filter((w) => !w.min);
 

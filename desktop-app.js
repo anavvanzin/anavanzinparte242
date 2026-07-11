@@ -10,6 +10,7 @@ const {
   QuoteIcon,
   AtlasIcon,
   WorksIcon,
+  TarotIcon,
   CloseBox
 } = window.avapp;
 const {
@@ -114,7 +115,7 @@ const DESK_ICONS = [{
     pt: 'tarô',
     en: 'tarot'
   },
-  Icon: AtlasIcon
+  Icon: TarotIcon
 }, {
   id: 'radiografia',
   label: {

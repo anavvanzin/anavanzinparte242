@@ -58,6 +58,14 @@ function IconArt({ art }) {
         <path d="M8 5 H23 V22 C23 24 21 25 19 25 H6 C8 25 9 24 9 22 V6" {...s} />
         <line x1="12" y1="11" x2="20" y2="11" {...s} /><line x1="12" y1="15" x2="20" y2="15" {...s} />
       </svg>);
+    case 'tarot': return (
+      <svg viewBox="0 0 30 30" style={{ color: ink }}>
+        <rect x="9" y="4" width="15" height="22" {...s} />
+        <rect x="4" y="7" width="15" height="22" {...s} fill="var(--paper)" />
+        <line x1="6" y1="10" x2="17" y2="10" {...s} stroke={gold} />
+        <line x1="6" y1="26" x2="17" y2="26" {...s} stroke={gold} />
+        <circle cx="11.5" cy="18" r="2.5" fill={rub} stroke="none" />
+      </svg>);
     default: return (
       <svg viewBox="0 0 30 30" style={{ color: ink }}><rect x="6" y="5" width="18" height="20" {...s} /></svg>);
   }
@@ -79,7 +87,7 @@ const MENUBAR = [
 // --- desk zones ---
 const ZONES = [
   { id: 'identidade', label: { pt: 'identidade', en: 'identity' }, cls: '', items: ['sobre', 'perfil', 'curriculo'] },
-  { id: 'outros', label: { pt: 'outros', en: 'other' }, cls: '', items: ['trabalhos', 'citacoes', 'advocacia', 'martirios', 'justitia_png', 'vo_jpg'] },
+  { id: 'outros', label: { pt: 'outros', en: 'other' }, cls: '', items: ['trabalhos', 'citacoes', 'advocacia', 'martirios', 'justitia_png', 'vo_jpg', 'tarot'] },
   { id: 'pesquisa', label: { pt: 'pesquisa', en: 'research' }, cls: 'research', items: ['iconocracia', 'atlas', 'radiografia', 'marginalia', 'publicacoes', 'sala', 'conceitos'] },
 ];
 
@@ -179,6 +187,20 @@ const CONTENT = {
     kicker: { pt: 'Contato', en: 'Contact' }, title: { pt: 'contato', en: 'contact' },
     lede: { pt: 'Para pesquisa, advocacia ou imprensa.', en: 'For research, legal practice or press.' },
     contact: true },
+  tarot: {
+    file: { pt: 'tarô', en: 'tarot' },
+    ext: '.app',
+    kind: 'page',
+    path: 'tarot/',
+    art: 'tarot',
+    w: 500,
+    h: 460,
+    kicker: { pt: 'Jogo de Cartas', en: 'Card Game' },
+    title: { pt: 'o tarô da iconocracia', en: 'the tarot of iconocracy' },
+    lede: { pt: 'Uma consulta alegórica sobre a história da cultura jurídica.', en: 'An allegorical consultation on the history of legal culture.' },
+    body: { pt: 'Uma experiência interativa com cartas inspiradas nos conceitos fundamentais da tese (Justiça, Lei, Verdade, República, Liberdade). Jogue para desvelar as alegorias jurídicas.', en: 'An interactive experience with cards inspired by the fundamental concepts of the thesis (Justice, Law, Truth, Republic, Liberty). Play to unveil the legal allegories.' }
+  },
 };
 
 window.MESA = { IconArt, L, MENUBAR, ZONES, CONTENT };
+

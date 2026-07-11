@@ -387,6 +387,54 @@ function CloseBox({
     }
   });
 }
+function TarotIcon({
+  size = 46
+}) {
+  return /*#__PURE__*/React.createElement("svg", {
+    width: size,
+    height: size,
+    viewBox: "0 0 48 48",
+    style: _crisp,
+    "aria-hidden": "true"
+  }, /*#__PURE__*/React.createElement("rect", {
+    x: "14",
+    y: "6",
+    width: "24",
+    height: "36",
+    fill: "var(--paper-deep)",
+    stroke: "var(--ink)",
+    strokeWidth: "1.6"
+  }), /*#__PURE__*/React.createElement("rect", {
+    x: "6",
+    y: "10",
+    width: "24",
+    height: "36",
+    fill: "var(--paper)",
+    stroke: "var(--ink)",
+    strokeWidth: "1.6"
+  }), /*#__PURE__*/React.createElement("line", {
+    x1: "9",
+    y1: "14",
+    x2: "27",
+    y2: "14",
+    stroke: "var(--gold)",
+    strokeWidth: "1.2"
+  }), /*#__PURE__*/React.createElement("line", {
+    x1: "9",
+    y1: "42",
+    x2: "27",
+    y2: "42",
+    stroke: "var(--gold)",
+    strokeWidth: "1.2"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: "18",
+    cy: "28",
+    r: "4",
+    fill: "var(--rubric)",
+    stroke: "var(--ink)",
+    strokeWidth: "1"
+  }));
+}
 Object.assign(window.avapp = window.avapp || {}, {
   FolderIcon,
   DocIcon,
@@ -397,6 +445,7 @@ Object.assign(window.avapp = window.avapp || {}, {
   QuoteIcon,
   AtlasIcon,
   WorksIcon,
+  TarotIcon,
   CloseBox
 });
 })();
