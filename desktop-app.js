@@ -112,8 +112,8 @@ const DESK_ICONS = [{
 }, {
   id: 'tarot',
   label: {
-    pt: 'tarô',
-    en: 'tarot'
+    pt: 'sorte',
+    en: 'luck'
   },
   Icon: TarotIcon
 }, {
@@ -223,7 +223,7 @@ const MENU_LABEL = {
     conceitos: 'Conceitos',
     publicacoes: 'Perfis',
     ius: 'Ius Gentium',
-    tarot: 'Tarô',
+    tarot: 'Sorte',
     contato: 'Contato'
   },
   en: {
@@ -232,7 +232,7 @@ const MENU_LABEL = {
     conceitos: 'Concepts',
     publicacoes: 'Profiles',
     ius: 'Ius Gentium',
-    tarot: 'Tarot',
+    tarot: 'Luck',
     contato: 'Contact'
   }
 };
@@ -652,7 +652,7 @@ function Desktop() {
       return;
     }
     if (id === 'tarot') {
-      window.location.href = 'tarot/';
+      window.location.href = 'sorte/';
       return;
     }
     if (id === 'radiografia') {
