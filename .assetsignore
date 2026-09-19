@@ -1,0 +1,13 @@
+.git
+.github
+node_modules
+scripts
+docs
+.DS_Store
+**/.DS_Store
+__pycache__
+fonts/__pycache__
+Nova ideia homepage Anavanzin.zip
+CLAUDE_CODE_HANDOFF.md
+_LEIA.md
+README.md
